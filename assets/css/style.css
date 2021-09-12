@@ -1336,3 +1336,45 @@ i.fab.fa-facebook-f { font-size: 1.9em; }
   }
   .lower-row .right { text-align: left; }
 }
+
+/* 404 page */
+
+.container-404 {
+  height: 100%;
+}
+
+.error-container {
+  padding: 190px 150px;
+  background-color: #ffcb66;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 142px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.error-container h3 {
+  font-weight: bold;
+  text-transform: none;
+}
+
+.error-container button {
+  margin-top: 50px;
+  color: #ffa800;
+  background-color: #fff;
+}
+
+.error-container button:hover {
+  background-color: #ff8a00;
+  color: #fff;
+}
+
+.error-container button:active {
+  background-color: #ff8a00;
+}

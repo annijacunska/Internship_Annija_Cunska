@@ -67,13 +67,15 @@ footer = document.getElementsByClassName("footer")[0];
 
 window.onscroll = function() {scrollFunction()};
 
-var top = mybutton.offsetTop;
-var footerTop = footer.offsetTop;
-var btnHeight = mybutton.offsetHeight;
-var maxy = footerTop - btnHeight;
+if (mybutton) {
+  var top = mybutton.offsetTop;
+  var footerTop = footer.offsetTop;
+  var btnHeight = mybutton.offsetHeight;
+  var maxy = footerTop - btnHeight;
+}
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (mybutton && (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)) {
     mybutton.style.display = 'block';
 
     //Stop before footer function - not working properly
@@ -86,7 +88,7 @@ function scrollFunction() {
     //   mybutton.classList.remove('js-sticky');
     // }
 
-  } else {
+  } else if (mybutton){
     mybutton.style.display = 'none';
   }
 }
@@ -178,6 +180,7 @@ function getVideoSrc(o, number) {
   label.innerHTML = o.getElementsByClassName("grid-name")[0].innerHTML;
 }
 
+// Lightslider plugin
 
 document.addEventListener("DOMContentLoaded", function(event) { 
   var slider = document.getElementById("light-slider");
@@ -187,6 +190,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 // Button functions
+
+function goToHomepage(){
+  location.href='./';
+}
 
 function goToForm() {
   var form = document.getElementsByClassName("form-container")[0];
