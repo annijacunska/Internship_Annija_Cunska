@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="robots" content="noindex, nofollow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Piesaki Sapni - SparkleHeart</title>
+
+	<link rel="shortcut icon" type="image/png" href="assets/img/Favicon.png"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/lightslider.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+<body>
+	<section>
+		<div class="container nav-container">
+			<nav class="menu">
+				<div class="logo">
+					<a href="./">
+						<img class="logo-img" src="assets/img/BlackLogo 3.jpg" alt="Logo image">
+					</a>
+				</div>
+				<div class="menu-items">
+					<ul class="lng-select">
+						<li class="lng js-selected"><a href=#>LV</a></li>
+						<li class="lng"><a href=#>EN</a></li>
+						<li class="lng"><a href=#>RU</a></li>
+					</ul>
+					<ul class="menu-item-list">
+						<li class="menu-item"><a href="ideja.html">Ideja</a></li>
+						<li class="menu-item js-active"><a href="piesakiSapni.html">Piesaki Sapni</a></li>
+						<li class="menu-item"><a href="uznemejiem.html">Uzņēmējiem</a></li>
+						<li class="menu-item"><a href="sapnuBanka.html">Sapņu banka</a></li>
+						<li class="menu-item"><a href="sapnusAtbalsta.html">Sapņus atbalsta</a></li>
+						<li class="menu-item"><a href="iedvesmasStasti.html">99 Iedvesmas stāsti</a></li>
+					</ul>
+				</div>
+				<a class="nav-btn nav-open-btn" onclick="openNav()">&#9776;</a>
+				<a class="nav-btn nav-close-btn" onclick="closeNav()">&#10005;</a>
+			</nav>
+		</div>
+	</section>
+	<section class="info-section">
+		<div class="container">
+			<div class="container-inner close-bottom">
+				<div class="row">
+					<div class="content large">
+            <h1>Piesaki sapni</h1>
+						<p class="space">Tev ir iespēja pieteikt personīgo vai profesionālo sapni.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <section>
+		<div class="container">
+			<div class="container-inner close-top">
+        <div class="flex-row">
+          <div class="column col-more narrow">
+            <img src="assets/img/baloon_icon.png" alt="Personīgais sapnis image">
+            <h2 class="space">Personīgais sapnis</h3>
+            <p>Bērnības nepiepildītie sapņi... No sev piederoša svaigi spiestas sulas bāra uz 
+              Tērbatas ielas līdz iespējai satikties ar Džekiju Čanu.</p>
+            <button class="btn btn-more" onclick="goToForm()">Piesaki sapni</button>
+          </div>
+          <div class="column col-more narrow">
+            <img src="assets/img/baloon_icon2.png" alt="Profesionālais sapnis image">
+            <h2 class="space">Profesionālais sapnis</h3>
+            <p>Sapnis vai ideja, kura ir balstīta uz reģiona, pasaules vai cilvēku attīstību 4 virzienos - 
+              kultūra, izglītība, zinātne, ģimene jeb sociālā vide. Tā ir iespēja attīstīt ideju, 
+              kas uzlabotu ikdienas dzīves kvalitāti vai atrisinātu vietēja vai starptautiska līmeņa problēmu. 
+              Pastāsti, kāpēc Tev tas ir tik nozīmīgi?</p>
+            <button class="btn btn-more" onclick="goToForm()">Piesaki sapni</button>
+          </div>
+        </div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container gallery-container ripped-edges">
+			<div class="gallery2">
+				<div class="gallery_item gallery_item-1">
+						<img src="assets/img/Lauma_4.jpg" alt="Gallery image 1" class="gallery_img">
+				</div>
+				<div class="gallery_item gallery_item-2">
+						<img src="assets/img/Brinuma_meita-3.jpg" alt="Gallery image 2" class="gallery_img">
+				</div>
+				<div class="gallery_item gallery_item-3">
+						<img src="assets/img/Arta_2 1.jpg" alt="Gallery image 3" class="gallery_img">
+				</div>
+				<div class="gallery_item gallery_item-4">
+						<img src="assets/img/Lauma_3.jpg" alt="Gallery image 4" class="gallery_img">
+				</div>
+				<div class="gallery_item gallery_item-5">
+						<img src="assets/img/Brinuma_meita-2.jpg" alt="Gallery image 5" class="gallery_img">
+				</div>
+			</div>
+		</div>
+	</section>
+	<br>
+  <section>
+		<div class="container form-container">
+			<div class="container-inner container-form">
+				<div class="row row-form">
+					<h2 class="form-title">Sazināties ar mums</h2>
+					<form name="sazinatiesForm" class="input-form">
+						<input type="text" id="flname" name="flname" placeholder="Vārds, Uzvārds*" required>
+						<input type="email" id="email" name="email" placeholder="E-pasts*" required>
+						<input type="tel" id="phone" name="phone" placeholder="Telefons*" pattern="[0-9]{8}" required><br>
+						<textarea id="message" name="message" placeholder="Jautājums, vai komentārs*" rows="4" cols="50" required></textarea>
+						<div class="form-unfilled">
+							<p class="form-msg">
+								* obligāti aizpildāmie lauki
+							</p>
+							<div class="row-privacy">
+								<input type="checkbox" id="privacy-chk" name="privacy-chk" value="Agree" required>
+								<label for="vehicle1" class="form-msg">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs nepieciešams.</label><br>
+							</div>
+							<div class="container-submit">
+								<button type="button" class="btn btn-submit" onclick="formSubmit()">Sūtīt</button>
+							</div>
+						</div>
+						<div class="form-filled">
+              <h3 class="affirmation-message">Paldies, ka sapņo!</h3>
+              <p class="affirmation-message">Ja Tavs sapnis tiks izvēlēts, mēs ar Tevi sazināsimies.</p>
+						</div>
+					</form>
+				</div>
+			</div>
+			<br>
+		</div>
+	</section>
+
+	<section>
+		<button class="scroll-up" onclick="topFunction()">&#9650;</button>
+		<div class="container footer">
+			<div class="row row-footer">
+				<div class="inner-row">
+					<div class="col col-logo">
+						<img src="assets/img/GoldenV2Logo 3.png" alt="SparkleHeart logo">
+					</div>
+					<div class="col col-menu">
+						<a href="ideja.html">Ideja</a>
+						<a href="piesakiSapni.html">Piesaki Sapni</a>
+						<a href="uznemejiem.html">Uzņēmējiem</a>
+						<a href="sapnuBanka.html">Sapņu banka</a>
+						<a href="sapnusAtbalsta.html">Sapņus atbalsta</a>
+						<a href="iedvesmasStasti.html">Iedvesmas stāsti</a>
+					</div>
+					<div class="col col-bank">
+						<h3>Biedrība SparkleHeart</h3>
+						<p>Reģistrācijas nr. 40008293119</p>
+						<p>Banka: SWEDBANK A/S</p>
+						<p>LV52HABA0551047652465</p>
+					</div>
+					<div class="col col-info right">
+						<h3>Juris Gogulis</h3>
+						<p>juris.gogulis@sparkleheart.org</p>
+						<p>+37126890034</p>
+						<p>Biķernieku iela 24a - 5, LV-1006</p>
+						<a class="open-prop">Skatīt rekvizītus</a>
+						<div class="social">
+							<a href=#><i class="fab fa-facebook-f"></i></a>
+							<a href=#><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="lower-row">
+					<p class="left">© SparkleHeart 2020. <br>Visas tiesības aizsargātas.</p>
+					<a class="right">Privātuma politika</a>
+				</div>
+			</div>
+		</div>
+	</section>
+  <script src="assets/js/theme.js"></script>
+</body>
+</html>
