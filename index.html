@@ -48,11 +48,11 @@
 		<div class="container video-container">
 			<img class="intro-img" src="assets/img/Sparkle Video 1.png" alt="Intro video">
 			<a class="btn overlay-btn">
-				<img class="btn-icon" src="assets/img/intro-button.png" alt="Play" onclick="playVideo()">
+				<img class="btn-icon" src="assets/img/intro-button.png" alt="Play" onclick="playVideo(this, '17', false)">
 			</a>
 		</div>
 		<div class="video-overlay closed" id="overvid">
-			<a class="video-btn video-close-btn" onclick="playVideo()">&#10005;</a>
+			<a class="video-btn video-close-btn" onclick="closeVideo()">&#10005;</a>
 			<div class="video-frame">
 				<iframe class="video" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FsparkleheartLV%2Fvideos%2F2368016840121489%2F&show_text=false&width=560" 
 				width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>	
@@ -61,9 +61,9 @@
 	</section>
 	<section class="info-section">
 		<div class="container">
-			<div class="container-inner">
+			<div class="container-inner close-bottom">
 				<div class="row">
-					<div class="content">
+					<div class="content close-top">
 						<p>SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. 
 							Šeit satiekas sapņotāji un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem. 
 							Mēs esam gatavi palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.
@@ -74,7 +74,7 @@
 		</div>
 	</section>
 	<section>
-		<div class="container gallery-container ripped-edges">
+		<div class="container gallery-container ripped-edges close-top">
 			<div class="gallery1">
 				<div class="gallery_item gallery_item-1">
 						<img src="assets/img/Zanda_1.jpg" alt="Gallery image 1" class="gallery_img">
@@ -183,8 +183,8 @@
 						<p>Biķernieku iela 24a - 5, LV-1006</p>
 						<a class="open-prop">Skatīt rekvizītus</a>
 						<div class="social">
-							<a href=#><i class="fab fa-facebook-f"></i></a>
-							<a href=#><i class="fab fa-instagram"></i></a>
+							<a href="https://www.facebook.com/sparkleheartLV" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/sparkleheart_org" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>

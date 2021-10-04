@@ -18,6 +18,13 @@ for (var i = 0; i < btns.length; i++) {
 var lngContainer = document.getElementsByClassName("lng-select");
 var lngs = lngContainer[0].getElementsByClassName("lng");
 
+var chosenLang = 0;
+
+// if (1) {
+//   lngs[chosenLang].className += " js-selected";
+
+// }
+
 for (var i = 0; i < lngs.length; i++) {
   lngs[i].addEventListener("click", function() {
 
@@ -99,27 +106,31 @@ function topFunction() {
 }
 
 function playStory(o) {
-    var number = o.getElementsByClassName("grid-number")[0].innerHTML;
-    console.log(number);
-    getVideoSrc(o, number);
-    playVideo();
+  var number = o.getElementsByClassName("grid-number")[0].innerHTML;
+  playVideo(o, number, true);
 }
 
-function playVideo(){
-  var video = document.getElementsByClassName("video-overlay")[0];
+var video = document.getElementsByClassName("video-overlay")[0];
+var vid = document.getElementsByClassName("video")[0];
 
+function playVideo(o, number, story){
   if (video.classList.contains("closed")) {
+    vid.src = getVideoSrc(o, number, story);
     video.className = video.className.replace(" closed", " show");
     body.style.overflow = 'hidden';
-  } else {
-    video.className = video.className.replace(" show", " closed");
-    body.style.overflow = 'visible';
   }
 }
 
-function getVideoSrc(o, number) {
+function closeVideo(){
+  if (video.classList.contains("show")) {
+    video.className = video.className.replace(" show", " closed");
+    body.style.overflow = 'visible';
+    vid.src = "";
+  }
+}
+
+function getVideoSrc(o, number, story) {
   var src;
-  var vid = document.getElementsByClassName("video")[0];
   var label = document.getElementsByClassName("video-label")[0];
 
   switch (number) {
@@ -176,18 +187,87 @@ function getVideoSrc(o, number) {
       break;       
   }
 
-  vid.src = src;
-  label.innerHTML = o.getElementsByClassName("grid-name")[0].innerHTML;
+  if (story) {
+      label.innerHTML = o.getElementsByClassName("grid-name")[0].innerHTML;
+  }
+  return src;
+}
+
+function showMore() {
+  var grid = document.getElementsByClassName("grid-container")[0];
+  var hiddenElements = grid.getElementsByClassName("js-hidden");
+  var shownElements = grid.getElementsByClassName("js-shown");
+  var button = document.getElementsByClassName("btn-show-more")[0];
+
+  if (hiddenElements.length > 0) {
+    for (var i = 0; i < hiddenElements.length; i) {
+      hiddenElements[i].className = hiddenElements[i].className.replace(" js-hidden", " js-shown");
+    }
+    button.innerHTML = "Skatīt mazāk";
+  } 
+  else if (shownElements.length > 0) {
+    for (var i = 0; i < shownElements.length; i) {
+      shownElements[i].className = shownElements[i].className.replace(" js-shown", " js-hidden");
+    }
+    button.innerHTML = "Skatīt vairāk";
+
+  }
 }
 
 // Lightslider plugin
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-  var slider = document.getElementById("light-slider");
-  if (slider) {
-    slider.lightSlider();
-  }  
-});
+
+if (document.body.classList.contains("ideja")) {
+  $(document).ready(function() {
+    $("#lightSlider").lightSlider({
+      item: 1,
+      autoWidth: false,
+  
+      addClass: '',
+      mode: "slide",
+      useCSS: true,
+      cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+      easing: 'linear', //'for jquery animation',////
+  
+      auto: false,
+      loop: false,
+      slideEndAnimation: true,
+      pause: 2000,
+  
+      keyPress: false,
+      controls: true,
+      prevHtml: '',
+      nextHtml: '',
+  
+      rtl:false,
+      adaptiveHeight:false,
+  
+      vertical:false,
+      verticalHeight:500,
+      vThumbWidth:100,
+  
+      thumbItem:10,
+      pager: false,
+      gallery: false,
+  
+      enableTouch:true,
+      enableDrag:true,
+      freeMove:true,
+      swipeThreshold: 40,
+  
+      responsive : [],
+    
+          // onBeforeStart: function (el) {},
+          // onSliderLoad: function (el) {},
+          // onBeforeSlide: function (el) {},
+          // onAfterSlide: function (el) {},
+          // onBeforeNextSlide: function (el) {},
+          // onBeforePrevSlide: function (el) {}
+      });
+  });
+}
+
+
 
 // Button functions
 

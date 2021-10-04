@@ -11,12 +11,15 @@
 
 	<link rel="shortcut icon" type="image/png" href="assets/img/Favicon.png"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/css/lightslider.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/lightslider.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css" />
 
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/lightslider.js"></script>
+
 </head>
-<body>
+<body class="ideja">
 	<section>
 		<div class="container nav-container">
 			<nav class="menu">
@@ -73,33 +76,23 @@
 		</div>
 	</section>
 	<section>
-		<div class="container">
+		<div class="container slider-section">
 			<div class="container-inner">
-        <ul id="light-slider">
-          <li>
-              <h3>Ken Ludden</h3>
-              <p>Director, Margot Fonteyn Academy of Ballet</p>
-              <p>For it is Juris work that is the light the human race needs so badly these days. 
-                His vision is inspired and talent is beyond measure.</p>
-          </li>
-          <li>
-              <h3>Second Slide</h3>
-              <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-          </li>
-      </ul>
-				<!-- <h3>Ken Ludden</h3>
-        <p>Director, Margot Fonteyn Academy of Ballet</p>
-        <p>For it is Juris work that is the light the human race needs so badly these days. 
-          His vision is inspired and talent is beyond measure.</p> -->
-			</div>
-		</div>
-	</section>
-	<br>
-	<section>
-		<div class="container">
-			<div class="container-inner">
-				<div class="row">
-					
+				<div class="slider-row">
+					<ul id="lightSlider">
+						<li>
+								<h3 class="slider-heading close-bottom">Ken Ludden</h3>
+								<p class="slider-intro">Director, Margot Fonteyn Academy of Ballet</p>
+								<p class="slider-content">For it is Juris work that is the <br>light the human race needs so badly these days.<br> 
+									His vision is inspired and talent is beyond measure.</p>
+						</li>
+						<li>
+								<h3 class="slider-heading close-bottom">Second Slide</h3>
+								<p class="slider-intro">Secont info about a person.</p>
+								<p class="slider-content">For it is HIM work that is the light.<br> 
+									His vision is inspired and talent is beyond measure.</p>
+						</li>
+      		</ul>
 				</div>
 			</div>
 		</div>
@@ -134,8 +127,8 @@
 						<p>Biķernieku iela 24a - 5, LV-1006</p>
 						<a class="open-prop">Skatīt rekvizītus</a>
 						<div class="social">
-							<a href=#><i class="fab fa-facebook-f"></i></a>
-							<a href=#><i class="fab fa-instagram"></i></a>
+							<a href="https://www.facebook.com/sparkleheartLV" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.instagram.com/sparkleheart_org" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -146,8 +139,7 @@
 			</div>
 		</div>
 	</section>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="assets/js/lightslider.js"></script>
+
   <script src="assets/js/theme.js"></script>
 </body>
 </html>
