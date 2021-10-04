@@ -1012,6 +1012,8 @@ button.btn-submit {
 .ideja-image-section .container-inner,
 .colored-section .container-inner {
   position: absolute;
+  right: 0;
+  left: 0;
   bottom: -60px;
 }
 
